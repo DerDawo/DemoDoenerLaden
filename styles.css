@@ -157,6 +157,10 @@ h1{
     object-fit:cover;
 }
 
+.mobile_reverse{
+    flex-direction: row;
+}
+
 .menu_item{
     letter-spacing: 1px;
     display: grid;
@@ -279,6 +283,10 @@ footer{
     gap: 10px;
 }
 
+footer > a{
+    color: white;
+}
+
 footer > a:visited{
     color: white;
 }
@@ -312,6 +320,14 @@ footer > a:visited{
 
     .menu_item{
         grid-template-columns: 10px 1fr 50px;
+    }
+
+    .menu_category_items{
+        flex-direction: column;
+    }
+
+    .mobile_reverse{
+        flex-direction: column-reverse;
     }
 
     .about_us_header{
