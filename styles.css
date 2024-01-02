@@ -1,0 +1,345 @@
+/* Montserrat Schriftart einbinden von Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+:root{
+  --dark_gray:#161616;
+  --graphit_gray:#404040;
+  --rust_red: #882311;
+  --mint_green: #54eea1;
+  --standard_padding_sides_desktop: 90px;
+  --standard_padding_sides_mobile: 7.5%;
+  --nav_padding_top:45px; 
+  --nav_padding_right:var(--standard_padding_sides_desktop); 
+  --nav_padding_bottom:45px; 
+  --nav_padding_left:var(--standard_padding_sides_desktop); 
+  --section_padding_top: calc(var(--nav_padding_top) + var(--nav_padding_bottom));
+  --section_padding_right: var(--standard_padding_sides_desktop);
+  --section_padding_bottom: var(--standard_padding_sides_desktop);
+  --section_padding_left: var(--standard_padding_sides_desktop);
+  --nav_padding_top_mobile:45px; 
+  --nav_padding_right_mobile:var(--standard_padding_sides_mobile); 
+  --nav_padding_bottom_mobile:45px; 
+  --nav_padding_left_mobile:var(--standard_padding_sides_mobile); 
+  --section_padding_top_mobile: calc(var(--nav_padding_top) + var(--nav_padding_bottom));
+  --section_padding_right_mobile: var(--standard_padding_sides_mobile);
+  --section_padding_bottom_mobile: var(--standard_padding_sides_desktop);
+  --section_padding_left_mobile: var(--standard_padding_sides_mobile);
+  --section_header_font_size:92px;
+  --standard_font_size_desktop: 18px;
+  --standard_font_size_mobile: 12px;
+}
+
+html{
+    font-size: var(--standard_font_size_desktop);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--graphit_gray);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    transition: 0.5s;
+    scroll-behavior: smooth;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--dark_gray);
+    padding: var(--nav_padding_top) var(--nav_padding_left);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+
+nav > a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(0deg, white, white);
+    background-position: 0 100%;
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+nav > a:hover{
+    background-size: 100% 3px;
+}
+
+nav > a:first-of-type{
+    border: 3px solid white;
+    background-size: 0% 100%;
+    padding:  5px ;
+    align-self: flex-start;    
+}
+
+nav > a:first-of-type:hover{
+    color: black;
+    background-size: 100% 100%;
+}
+
+
+section{
+    padding: 114.5px var(--section_padding_right) var(--section_padding_bottom) var(--section_padding_left);
+    width: calc(100% - var(--section_padding_left) - var(--section_padding_right));
+    min-height: calc(100dvh - var(--section_padding_bottom));
+}
+
+#home_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home_section > p {
+    font-family: 'Tangerine', serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+#home_background{
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    filter: brightness(25%) blur(10px);
+    object-fit: cover;
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    border: 3px solid white;
+    letter-spacing: 4px;
+    padding: 15px;
+    margin: 0;
+    color: white;
+    width: fit-content;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+#menu_section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    color: white;  
+}
+
+.menu_category{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.menu_item{
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-areas: 
+        'number name price'
+        'description description description'
+        ;
+    grid-template-columns: 30px 1fr 100px;
+    gap: 10px;
+    margin-bottom: 25px;  
+}
+
+.menu_item_name{
+    overflow: hidden; 
+    white-space: nowrap;
+    width: 100%;
+}
+
+.menu_item_name:after{ 
+    margin: 0 0 0 15px;
+    letter-spacing: 5px;
+    content: "......................................................................................................................................................................................................................................................"; 
+}
+
+.menu_item_price{
+    overflow: hidden;
+    text-align: end;
+}
+
+.menu_item_description{
+    font-size: calc(2rem / 3);
+    grid-area: description;
+}
+
+#about_us_section{
+    background-color: var(--dark_gray);
+    color: white;
+}
+
+.about_us_header{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: calc(5rem + 1rem / 3);
+}
+
+.about_us_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.about_us_item > img{
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+    filter: brightness(90%);
+}
+
+.about_us_item > p{
+    text-align: center;
+    letter-spacing: 1px;
+    width: 50%;
+    line-height: 2em;
+}
+
+.about_us_item > p > label{
+    font-family: 'Tangerine', serif;
+    letter-spacing: 2px;
+    font-size: 3.5rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+#contact_section{
+    background-image: url('./oriental_background_with_dark_gray_graphit_gray.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -50%;
+    color: white;
+}
+
+.contact_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#googleMap{
+    background-color: #777777;
+}
+
+.contact_content > p{
+    text-align: center;
+    letter-spacing: 1px;
+    width: 50%;
+    line-height: 2em;
+}
+
+footer{
+    background-color: var(--dark_gray);
+    padding: 15px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.7rem;
+    gap: 10px;
+}
+
+footer > a:visited{
+    color: white;
+}
+
+.social_media_links{
+    display: flex;
+    gap: 10px;
+}
+
+.social_media_links > a > img {
+    height: 0.7rem;
+    width: 0.7rem;
+    filter: invert();
+}
+
+@media only screen and (max-width: 900px) {
+    html{
+        font-size: var(--standard_font_size_mobile);
+    }
+
+    nav{
+        padding: var(--nav_padding_top_mobile) var(--nav_padding_left_mobile);
+    }
+    
+
+    section{
+        padding: 114.5px var(--section_padding_right_mobile) var(--section_padding_bottom_mobile) var(--section_padding_left_mobile);
+        width: calc(100% - var(--section_padding_left_mobile) - var(--section_padding_right_mobile));
+        min-height: calc(100vh - var(--section_padding_bottom_mobile));
+    }
+
+    .menu_item{
+        grid-template-columns: 10px 1fr 50px;
+    }
+
+    .about_us_header{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 3rem;
+    }
+    
+    .about_us_item{
+        flex-direction: column;
+    }
+
+    .about_us_item > img{
+        width: 90%;
+        height: 90%;
+    }
+    
+    .about_us_item > p{
+        width: 100%;
+    }
+    
+    .about_us_item > p > label{
+        font-size: 3rem;
+    }
+
+    .contact_content > p{
+        width: 100%;
+    }
+    
+    #contact_section{
+        background-position: 50%;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+    
+    .social_media_links > a > img {
+        height: 1rem;
+        width: 1rem;
+    }
+
+}

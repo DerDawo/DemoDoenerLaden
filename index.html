@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Döner Laden</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+</head>
+<body>
+    <nav>
+        <a href="#home_section">Demo Döner</a>
+        <a href="#menu_section">Speisekarte</a>
+        <a href="#about_us_section">Über Uns</a>
+        <a href="#contact_section">Kontakt</a>
+    </nav>
+    <section id="home_section">
+        <h1>Demo Döner</h1>
+        <p>Deine Reise in den Orient</p>
+        <img id="home_background" src="https://www.osnabrueckbesten.de/wp-content/uploads/aroma-lounge-osnabrueck-540x400.png" >
+    </section>
+    <section id="menu_section">
+        <h2 class="about_us_header fade-in">Speisekarte</h2>
+
+        <h3 class="menu_category fade-in">Döner</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Classic Döner</span>
+            <span class="menu_item_price">4,50 €</span>
+            <span class="menu_item_description">Gegrilltes Hähnchen- oder Rindfleisch, Salat, Tomaten, Zwiebeln, Knoblauchsauce.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Vegetarischer Döner</span>
+            <span class="menu_item_price">4,00 €</span>
+            <span class="menu_item_description">Gebratener Gemüse-Döner mit Hummus, Salat, Tomaten, Joghurtsauce.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Scharfer Döner</span>
+            <span class="menu_item_price">5,00 €</span>
+            <span class="menu_item_description">Gewürztes Fleisch, scharfe Soße, Jalapeños, Salat, Tomaten.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Döner-Spezial mit Feta</span>
+            <span class="menu_item_price">5,50 €</span>
+            <span class="menu_item_description">Hähnchen- oder Rindfleisch, Feta-Käse, Oliven, Tomaten, Tzatziki.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Knoblauch-Liebhaber Döner</span>
+            <span class="menu_item_price">5,50 €</span>
+            <span class="menu_item_description">Knoblauchmariniertes Fleisch, Knoblauchsoße, Salat, Tomaten.</span>
+        </div>
+        
+        <h3 class="menu_category fade-in">Dürum</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Dürum Klassik</span>
+            <span class="menu_item_price">5,00 €</span>
+            <span class="menu_item_description">Fleisch nach Wahl, Salat, Tomaten, Zwiebeln, Dürum-Fladen.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Falafel Dürum</span>
+            <span class="menu_item_price">4,50 €</span>
+            <span class="menu_item_description">Hausgemachte Falafel, Hummus, Salat, Tomaten, Joghurtsauce.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Mediterraner Dürum</span>
+            <span class="menu_item_price">6,00 €</span>
+            <span class="menu_item_description">Hähnchen, gegrilltes Gemüse, Feta, Oliven, Tzatziki.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Pikanter Dürum</span>
+            <span class="menu_item_price">5,50 €</span>
+            <span class="menu_item_description">Gewürztes Fleisch, scharfe Soße, Jalapeños, Salat, Tomaten.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Avocado-Hähnchen Dürum</span>
+            <span class="menu_item_price">6,50 €</span>
+            <span class="menu_item_description">Gegrilltes Hähnchen, Avocado, Salat, Tomaten, Knoblauchsoße.</span>
+        </div>
+        
+        <h3 class="menu_category fade-in">Lahmacun</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Traditionelles Lahmacun</span>
+            <span class="menu_item_price">3,50 €</span>
+            <span class="menu_item_description">Dünner Teig mit würziger Hackfleischsoße, Tomaten, Zwiebeln.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Vegetarisches Lahmacun</span>
+            <span class="menu_item_price">4,00 €</span>
+            <span class="menu_item_description">Tomatensoße, Paprika, Zucchini, Käse, Oliven.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Scharfes Lahmacun</span>
+            <span class="menu_item_price">4,50 €</span>
+            <span class="menu_item_description">Pikantes Hackfleisch, scharfe Soße, Peperoni, Tomaten.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Lahmacun Deluxe</span>
+            <span class="menu_item_price">5,00 €</span>
+            <span class="menu_item_description">Hackfleisch, Tomaten, Rucola, Parmesan, Balsamico-Reduktion.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Klassik mit Knoblauchsoße</span>
+            <span class="menu_item_price">4,00 €</span>
+            <span class="menu_item_description">Traditionelle Füllung mit extra Knoblauchsoße.</span>
+        </div>
+        
+        <h3 class="menu_category fade-in">Pide</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Sucuk Pide</span>
+            <span class="menu_item_price">6,00 €</span>
+            <span class="menu_item_description">Sucuk, Ei, Käse, Tomaten, Paprika.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Spinat-Feta Pide</span>
+            <span class="menu_item_price">5,50 €</span>
+            <span class="menu_item_description">Frischer Spinat, Feta-Käse, Zwiebeln, Tomaten.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Hähnchen-Paprika Pide</span>
+            <span class="menu_item_price">6,50 €</span>
+            <span class="menu_item_description">Gegrilltes Hähnchen, Paprika, Zwiebeln, Joghurtsauce.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Klassische Gemüse Pide</span>
+            <span class="menu_item_price">5,00 €</span>
+            <span class="menu_item_description">Tomaten, Paprika, Zucchini, Oliven, Feta.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Lachs Pide</span>
+            <span class="menu_item_price">7,00 €</span>
+            <span class="menu_item_description">Geräucherter Lachs, Frischkäse, Kapern, Zwiebeln.</span>
+        </div>
+        
+        <h3 class="menu_category fade-in">Pizza</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Margherita</span>
+            <span class="menu_item_price">4,00 €</span>
+            <span class="menu_item_description">Tomatensauce, Mozzarella, Basilikum.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Prosciutto Funghi</span>
+            <span class="menu_item_price">5,00 €</span>
+            <span class="menu_item_description">Tomatensauce, Mozzarella, Schinken, Champignons.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Vegetarische Pizza</span>
+            <span class="menu_item_price">5,50 €</span>
+            <span class="menu_item_description">Tomatensauce, Mozzarella, Paprika, Zwiebeln, Oliven.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Pizza Quattro Formaggi</span>
+            <span class="menu_item_price">6,00 €</span>
+            <span class="menu_item_description">Tomatensauce, Mozzarella, Gorgonzola, Parmesan, Emmentaler.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Pizza Diavola</span>
+            <span class="menu_item_price">6,50 €</span>
+            <span class="menu_item_description">Tomatensauce, Mozzarella, scharfe Salami, Peperoni.</span>
+        </div>
+        
+        <h3 class="menu_category fade-in">Pasta</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Spaghetti Bolognese</span>
+            <span class="menu_item_price">6,00 €</span>
+            <span class="menu_item_description">Traditionelle Fleischsoße, Parmesan.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Penne Arrabiata</span>
+            <span class="menu_item_price">5,50 €</span>
+            <span class="menu_item_description">Tomatensauce, Knoblauch, scharfe Peperoni.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Rucola-Pesto Linguine</span>
+            <span class="menu_item_price">7,00 €</span>
+            <span class="menu_item_description">Basilikumpesto, Rucola, Kirschtomaten, Pinienkerne.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Carbonara Tagliatelle</span>
+            <span class="menu_item_price">6,50 €</span>
+            <span class="menu_item_description">Sahnesoße, Speck, Eigelb, Parmesan.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Gemüse-Lasagne</span>
+            <span class="menu_item_price">8,00 €</span>
+            <span class="menu_item_description">Schichten aus Lasagneplatten, Gemüse, Bechamelsauce.</span>
+        </div>
+        
+        <h3 class="menu_category fade-in">Getränke</h3>
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">1.</span>
+            <span class="menu_item_name">Ayran</span>
+            <span class="menu_item_price">2,00 €</span>
+            <span class="menu_item_description">Traditionelles türkisches Joghurtgetränk.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">2.</span>
+            <span class="menu_item_name">Granatapfelsaft</span>
+            <span class="menu_item_price">3,00 €</span>
+            <span class="menu_item_description">Frisch gepresster Granatapfelsaft.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">3.</span>
+            <span class="menu_item_name">Minzlimonade</span>
+            <span class="menu_item_price">2,50 €</span>
+            <span class="menu_item_description">Limonade mit frischer Minze.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">4.</span>
+            <span class="menu_item_name">Türkischer Tee</span>
+            <span class="menu_item_price">1,50 €</span>
+            <span class="menu_item_description">Schwarzer Tee, traditionell serviert.</span>
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">5.</span>
+            <span class="menu_item_name">Frisch gepresster Orangensaft</span>
+            <span class="menu_item_price">3,50 €</span>
+            <span class="menu_item_description">Frisch gepresster Saft aus Orangen
+        </div>
+        
+        <div class="menu_item fade-in">
+            <span class="menu_item_number">6.</span>
+            <span class="menu_item_name">Cola, Fanta, Sprite und noch mehr</span>
+            <span class="menu_item_price">2,50 €</span>
+            <span class="menu_item_description">Klassische Softdrinks
+        </div>
+
+    </section>
+    <section id="about_us_section">
+        <h2 class="about_us_header fade-in">Über Uns</h2>
+        <div class="about_us_item">
+            <img src="./217128.jpg" loading="lazy" class="fade-in">
+            <p class="fade-in">
+                <label class="fade-in">Traditionelle Genüsse in jedem Bissen</label>
+                <br>
+                Herzlich willkommen bei unserem Dönerladen – dem Ort, an dem Genuss und Tradition aufeinandertreffen! Unser Team ist stolz darauf, Ihnen eine authentische kulinarische Erfahrung zu bieten, die durch die Aromen der orientalischen Küche inspiriert ist. Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, nur die hochwertigsten Zutaten zu verwenden, um Ihnen einen Döner von höchster Qualität zu servieren. Bei uns erwarten Sie nicht nur erstklassige Fleischvariationen, sondern auch frische Gemüsezutaten und selbstgemachte Saucen, die unseren Döner zu einem wahren Gaumenschmaus machen.
+            </p>
+        </div>
+        <div class="about_us_item">
+            <p class="fade-in">
+                <label class="fade-in">Herzliche Gastfreundschaft und Vielfalt erleben</label>
+                <br>
+                Unsere Leidenschaft für exzellentes Essen und die Zufriedenheit unserer Gäste stehen bei uns an erster Stelle. In unserem gemütlichen Ambiente möchten wir Ihnen eine Auszeit vom Alltag bieten und Sie mit herzlicher Gastfreundschaft empfangen. Unser engagiertes Team freut sich darauf, Sie mit einer vielfältigen Auswahl an Dönerspezialitäten zu verwöhnen – sei es der klassische Döner Kebab, vegetarische Optionen oder besondere Spezialitäten. Entdecken Sie die Geschmackswelt des Orients in unserem Dönerladen und lassen Sie sich von der Qualität unserer Gerichte überzeugen. Wir laden Sie herzlich ein, Teil unserer Dönerfamilie zu werden und freuen uns darauf, Sie bei uns begrüßen zu dürfen!
+            </p>
+            <img src="./A_friendly_team_serving_doner_kebaps_with_smiles.jpg" loading="lazy" class="fade-in">
+        </div>
+    </section>
+    <section id="contact_section">
+        <h2 class="about_us_header fade-in">Kontakt</h2>
+        <div class="contact_content">
+            <div id="googleMap" style="width:100%;height:400px;" class="fade-in"></div>
+            <p class="fade-in">
+                Adresse: Musterstraße 123, 12345 Musterstadt
+                <br>
+                Telefonnummer: +49 123 4567890
+                <br> 
+                E-Mail-Adresse: info@demodoener.de
+                <br>
+                <br>
+                
+                Öffnungszeiten:
+                <br>
+                Montag bis Donnerstag: 13:00 Uhr - 20:00 Uhr
+                <br>
+                Freitag und Samstag: 10:00 Uhr - 22:00 Uhr
+                <br>
+                Sonntag: 10:00 Uhr - 20:00 Uhr
+                <br>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <a href="#home_section">Home</a>
+        <a href="#menu_section">Speisekarte</a>
+        <a href="#about_us_section">Über Uns</a>
+        <a href="#contact_section">Kontakt</a>
+        <a href="./impressum/index.html">Impressum</a>
+        <a href="./agb/index.html">AGB</a>
+        <a href="./datenschutz/index.html">Datenschutzerklärung</a>
+        <div class="social_media_links">
+            <a href=""><img src="./instagram-logo.png"></a>
+            <a href=""><img src="./whatsapp.png"></a>
+            <a href=""><img src="./facebook.png"></a>
+            <a href=""><img src="./twitter.png"></a>
+            <a href=""><img src="./tik-tok.png"></a>
+        </div>
+    </footer>
+</body>
+</html>
