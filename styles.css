@@ -7,31 +7,54 @@
   --graphit_gray:#404040;
   --rust_red: #882311;
   --mint_green: #54eea1;
+
+  /*Desktop*/
+  --standard_font_size_desktop: 18px;
+
   --standard_padding_sides_desktop: 90px;
+
+  --nav_padding_top_desktop:45px; 
+  --nav_padding_right_desktop:var(--standard_padding_sides_desktop); 
+  --nav_padding_bottom_desktop:45px; 
+  --nav_padding_left_desktop:var(--standard_padding_sides_desktop); 
+  
+  --section_padding_top_desktop: calc(var(--nav_padding_top_desktop) + var(--nav_padding_bottom_desktop));
+  --section_padding_right_desktop: var(--standard_padding_sides_desktop);
+  --section_padding_bottom_desktop: var(--standard_padding_sides_desktop);
+  --section_padding_left_desktop: var(--standard_padding_sides_desktop);
+  
+  /*Mobile*/
+  --standard_font_size_mobile: 12px;
+  
   --standard_padding_sides_mobile: 7.5%;
-  --nav_padding_top:45px; 
-  --nav_padding_right:var(--standard_padding_sides_desktop); 
-  --nav_padding_bottom:45px; 
-  --nav_padding_left:var(--standard_padding_sides_desktop); 
-  --section_padding_top: calc(var(--nav_padding_top) + var(--nav_padding_bottom));
-  --section_padding_right: var(--standard_padding_sides_desktop);
-  --section_padding_bottom: var(--standard_padding_sides_desktop);
-  --section_padding_left: var(--standard_padding_sides_desktop);
-  --nav_padding_top_mobile:45px; 
+
+  --nav_padding_top_mobile:20px; 
   --nav_padding_right_mobile:var(--standard_padding_sides_mobile); 
-  --nav_padding_bottom_mobile:45px; 
+  --nav_padding_bottom_mobile:20px; 
   --nav_padding_left_mobile:var(--standard_padding_sides_mobile); 
+
   --section_padding_top_mobile: calc(var(--nav_padding_top) + var(--nav_padding_bottom));
   --section_padding_right_mobile: var(--standard_padding_sides_mobile);
   --section_padding_bottom_mobile: var(--standard_padding_sides_desktop);
   --section_padding_left_mobile: var(--standard_padding_sides_mobile);
-  --section_header_font_size:92px;
-  --standard_font_size_desktop: 18px;
-  --standard_font_size_mobile: 12px;
+
 }
 
 html{
-    font-size: var(--standard_font_size_desktop);
+    --standard_font_size: var(--standard_font_size_desktop);
+    --standard_padding_sides: var(--standard_padding_sides_desktop);
+
+    --nav_padding_top: var(--nav_padding_top_desktop);
+    --nav_padding_right: var(--nav_padding_right_desktop);
+    --nav_padding_bottom: var(--nav_padding_bottom_desktop);
+    --nav_padding_left: var(--nav_padding_left_desktop);
+    
+    --section_padding_top: var(--section_padding_top_desktop); 
+    --section_padding_right: var(--section_padding_right_desktop); 
+    --section_padding_bottom: var(--section_padding_bottom_desktop); 
+    --section_padding_left: var(--section_padding_left_desktop);  
+
+    font-size: var(--standard_font_size);
 }
 
 html, body{
@@ -86,9 +109,8 @@ nav > a:first-of-type:hover{
     background-size: 100% 100%;
 }
 
-
 section{
-    padding: 114.5px var(--section_padding_right) var(--section_padding_bottom) var(--section_padding_left);
+    padding: calc(5px + 5px + 3px + 3px  + 1rem + 2 * var(--nav_padding_top)) var(--section_padding_right) var(--section_padding_bottom) var(--section_padding_left);
     width: calc(100% - var(--section_padding_left) - var(--section_padding_right));
     min-height: calc(100dvh - var(--section_padding_bottom));
 }
@@ -304,18 +326,23 @@ footer > a:visited{
 
 @media only screen and (max-width: 900px) {
     html{
-        font-size: var(--standard_font_size_mobile);
-    }
-
-    nav{
-        padding: var(--nav_padding_top_mobile) var(--nav_padding_left_mobile);
-    }
+        --standard_font_size: var(--standard_font_size_mobile);
+        --standard_padding_sides: var(--standard_padding_sides_mobile);
     
+        --nav_padding_top: var(--nav_padding_top_mobile);
+        --nav_padding_right: var(--nav_padding_right_mobile);
+        --nav_padding_bottom: var(--nav_padding_bottom_mobile);
+        --nav_padding_left: var(--nav_padding_left_mobile);
+        
+        --section_padding_top: var(--section_padding_top_mobile); 
+        --section_padding_right: var(--section_padding_right_mobile); 
+        --section_padding_bottom: var(--section_padding_bottom_mobile); 
+        --section_padding_left: var(--section_padding_left_mobile);  
+    }
 
     section{
-        padding: 114.5px var(--section_padding_right_mobile) var(--section_padding_bottom_mobile) var(--section_padding_left_mobile);
-        width: calc(100% - var(--section_padding_left_mobile) - var(--section_padding_right_mobile));
-        min-height: calc(100vh - var(--section_padding_bottom_mobile));
+        padding: 114.5px var(--section_padding_right) var(--section_padding_bottom) var(--section_padding_left);
+        min-height: calc(100dvh - var(--section_padding_bottom));
     }
 
     .menu_item{
