@@ -29,3 +29,15 @@ document.addEventListener("laod",init)
 function init(){
     myMap()
 }
+
+document.getElementById("open_mobile_nav").addEventListener("click",openMobileNav)
+document.getElementById("close_mobile_nav").addEventListener("click",closeMobileNav)
+for(let i = 0; i < document.getElementsByClassName("mobile_nav_option").length; i++){
+  document.getElementsByClassName("mobile_nav_option")[i].addEventListener("click",closeMobileNav)
+}
+function openMobileNav(){
+  document.getElementsByClassName("mobile_nav")[0].style.transform = "translateX(0%)";
+}
+function closeMobileNav(){
+  document.getElementsByClassName("mobile_nav")[0].style.transform = "translateX(100%)";
+}
