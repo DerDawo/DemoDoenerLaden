@@ -16,19 +16,6 @@ function fadeInOnScroll(){
     }
 }
 
-function myMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(51.508742,-0.120850),
-      zoom:5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-
-document.addEventListener("laod",init)
-
-function init(){
-    myMap()
-}
 
 document.getElementById("open_mobile_nav").addEventListener("click",openMobileNav)
 document.getElementById("close_mobile_nav").addEventListener("click",closeMobileNav)

@@ -1,0 +1,126 @@
+.caroussel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.caroussel-items, .caroussel-actions{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.caroussel-items{
+    overflow: hidden;
+}
+
+.caroussel-item{
+    width:100%;
+    height: 100%;
+}
+
+.show-caroussel-item{
+    opacity: 1;
+    height: 100%;
+    display: block;
+    transition: height 0ms 0ms, opacity 400ms 0ms, display 0ms 500ms;
+}
+
+.hide-caroussel-item{
+    opacity: 0;
+    height: 0;
+    display: none;
+    transition: height 0ms 400ms, opacity 400ms 0ms, display 0ms 500ms;
+}
+
+.caroussel-actions{
+    display:grid;
+    grid-template-rows: 1fr auto;
+    z-index: 1;
+}
+
+.caroussel-buttons > button{
+    border: 0;
+    background-color: white;
+    opacity: 0.5;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-itmes: center;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.caroussel-buttons > button:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.caroussel-buttons > button:active{
+    opacity: 1;
+}
+
+.arrow-box{
+    border: 2px solid gray;
+    height: 10px;
+    width: 10px;
+}
+
+.pointing-left{
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(45deg) translate(10%,-10%);
+}
+
+.pointing-right{
+    border-bottom: 0;
+    border-left: 0;
+    transform: rotate(45deg) translate(-10%,10%);
+}
+
+.caroussel-buttons{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: columns;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.caroussel-dots{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+    padding: 10px 0;
+    background-image: linear-gradient(#00000000, #00000025, #00000000);
+}
+
+.caroussel-dots > label{
+    height:10px;
+    width:10px;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.caroussel-dots > label:hover{
+    background-color: white;
+    opacity: 0.75;
+    cursor:pointer;
+}
+
+.caroussel-dots > label:has(input:checked){
+    opacity: 1;
+}
+
+.caroussel-dots > label > input{
+    display:none;
+}

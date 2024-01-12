@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Döner Laden</title>
     <link rel="stylesheet" href="styles.css">
+    <!--page scripts-->
     <script src="./script.js" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
+    <!--caroussel.js-->
+    <link rel="stylesheet" href="./libs/caroussel/caroussel.css">
+    <script src="./libs/caroussel/caroussel.js"></script>
 </head>
 <body>
     <nav>
@@ -25,9 +27,19 @@
         <a class="mobile_nav_option" href="#contact_section">Kontakt</a>
     </div>
     <section id="home_section">
-        <h1>Demo Döner</h1>
-        <p>Deine Reise in den Orient</p>
-        <img id="home_background" src="https://www.osnabrueckbesten.de/wp-content/uploads/aroma-lounge-osnabrueck-540x400.png" >
+        <div class="caroussel">
+            <div class="caroussel-items">
+                <div class="caroussel-item">
+                    Demo 1
+                </div>
+                <div class="caroussel-item">
+                    Demo 2
+                </div>
+                <div class="caroussel-item">
+                    Demo 3
+                </div>
+            </div>
+        </div>
     </section>
     <section id="menu_section">
         <h2 class="about_us_header fade-in">Speisekarte</h2>
