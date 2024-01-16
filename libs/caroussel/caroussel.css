@@ -1,3 +1,8 @@
+:root{
+    --dot_size: 10px;
+    --dot_spacing: 30px;
+}
+
 .caroussel{
     width: 100%;
     height: 100%;
@@ -24,7 +29,7 @@
 .show-caroussel-item{
     opacity: 1;
     height: 100%;
-    display: block;
+    display: flex;
     transition: height 0ms 0ms, opacity 400ms 0ms, display 0ms 500ms;
 }
 
@@ -49,11 +54,14 @@
     height: auto;
     display: flex;
     justify-content: center;
-    align-itmes: center;
+    align-items: center;
     padding: 10px;
     border-radius: 50%;
     margin: 0 15px;
     transition: 0.2s;
+    -webkit-box-shadow: 0px 0px 20px 5px #000000; 
+    box-shadow: 0px 0px 20px 5px #000000;
+
 }
 
 .caroussel-buttons > button:hover{
@@ -97,18 +105,20 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    gap: 10px;
-    padding: 10px 0;
-    background-image: linear-gradient(#00000000, #00000025, #00000000);
+    gap: var(--dot_spacing);
+    padding: var(--dot_spacing) 0;
+    /*background-image: linear-gradient(#00000000, #00000025, #00000000);*/
 }
 
 .caroussel-dots > label{
-    height:10px;
-    width:10px;
+    height: var(--dot_size);
+    width: var(--dot_size);
     background-color: white;
     opacity: 0.5;
     border-radius: 50%;
     transition: 0.2s;
+    -webkit-box-shadow: 0px 0px 20px 5px #000000; 
+    box-shadow: 0px 0px 20px 5px #000000;
 }
 
 .caroussel-dots > label:hover{

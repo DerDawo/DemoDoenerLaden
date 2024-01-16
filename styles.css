@@ -49,6 +49,8 @@ html{
     --nav_padding_bottom: var(--nav_padding_bottom_desktop);
     --nav_padding_left: var(--nav_padding_left_desktop);
     
+    --nav_height_calculated: calc(5px + 5px + 3px + 3px  + 1rem + 2 * var(--nav_padding_top));
+
     --section_padding_top: var(--section_padding_top_desktop); 
     --section_padding_right: var(--section_padding_right_desktop); 
     --section_padding_bottom: var(--section_padding_bottom_desktop); 
@@ -118,7 +120,7 @@ nav > a:first-of-type:hover{
 }
 
 section{
-    padding: calc(5px + 5px + 3px + 3px  + 1rem + 2 * var(--nav_padding_top)) var(--section_padding_right) var(--section_padding_bottom) var(--section_padding_left);
+    padding: var(--nav_height_calculated) var(--section_padding_right) var(--section_padding_bottom) var(--section_padding_left);
     width: calc(100% - var(--section_padding_left) - var(--section_padding_right));
     min-height: calc(100dvh - var(--section_padding_bottom));
 }
@@ -130,9 +132,8 @@ section{
 }
 
 .caroussel{
-    margin-top: 4px;
-    width: calc(100% + 2*var(--nav_padding_left)) !important;
-    height: calc(100dvh - 3*var(--nav_padding_bottom)) !important;
+    width: calc(100% + var(--nav_padding_left) + var(--nav_padding_right)) !important;
+    height: calc(100dvh - var(--section_padding_bottom) - var(--dot_spacing) - var(--dot_size)) !important;
 }
 
 #home_background{
@@ -277,7 +278,7 @@ h1{
     background-image: url('./oriental_background_with_dark_gray_graphit_gray.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -50%;
+    background-position: center;
     color: white;
 }
 
@@ -473,4 +474,77 @@ footer > a:visited{
         width: 1rem;
     }
 
+}
+
+
+.restaurant_slide{
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 50px;
+}
+.restaurant_slide > h3{
+    font-family: 'Tangerine', serif;
+    text-shadow: 0px 0px 20px #000000;
+    font-size: 5rem;
+    margin: 0;
+}
+.restaurant_slide > div{
+    font-family: 'Montserrat', sans-serif;
+    width: 75%;
+    text-shadow: 0px 0px 20px #000000;
+    text-align: center;
+    line-height: 2rem;
+}
+#restaurant_slide_1{
+    background-image: url('./img/inside1.png');
+}
+#restaurant_slide_2{
+    background-image: url('./img/restaurant.png');
+}
+#restaurant_slide_3{
+    background-image: url('./img/inside2.jpg');
+}
+
+.fade-in-caroussel{
+    opacity: 0;
+    transform: translate(0, -5vh);
+    transition: all 0.5s;
+}
+
+.fade-in-caroussel.visible-caroussel-content {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.delay-fade-in-100{
+    transition-delay: .1s;
+}
+.delay-fade-in-200{
+    transition-delay: .2s;
+}
+.delay-fade-in-300{
+    transition-delay: .3s;
+}
+.delay-fade-in-400{
+    transition-delay: .4s;
+}
+.delay-fade-in-500{
+    transition-delay: .5s;
+}
+.delay-fade-in-600{
+    transition-delay: .6s;
+}
+.delay-fade-in-700{
+    transition-delay: .7s;
+}
+.delay-fade-in-800{
+    transition-delay: .8s;
+}
+.delay-fade-in-900{
+    transition-delay: .9s;
 }
